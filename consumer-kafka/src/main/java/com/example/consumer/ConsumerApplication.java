@@ -11,16 +11,16 @@ import org.springframework.context.annotation.Bean;
 import java.util.function.Consumer;
 
 @SpringBootApplication
-public class ProducerApplication {
+public class ConsumerApplication {
 
     private final UserRepository userRepository;
 
-    public ProducerApplication(UserRepository userRepository) {
+    public ConsumerApplication(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ProducerApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 
 
