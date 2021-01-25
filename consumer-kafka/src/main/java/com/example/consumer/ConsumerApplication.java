@@ -30,7 +30,7 @@ public class ConsumerApplication {
         return input -> input.foreach((k, V) -> {
             User user = new User();
             user.setName(V.getName());
-            this.userRepository.save(user);
+            this.userRepository.saveAndFlush(user);
         });
     }
 }
